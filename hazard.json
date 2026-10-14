@@ -1,0 +1,12 @@
+{
+  "format": "avsim-studio/1",
+  "params": {},
+  "policy": {},
+  "hazards": [
+    {"type": "brake", "who": "C2", "decel": 6.3, "dur": 2.5, "t0": 4.6, "trig": null}
+  ],
+  "ego": "planner",
+  "space": {"h0_t0": [2.0, 8.0], "h0_decel": [3.0, 7.5], "h0_dur": [1.0, 5.0]},
+  "exposure": 0.05,
+  "why": "Xe vừa cắt làn rồi phanh gấp ngay trước mũi xe ta (xe ngoài đường hay chen vào rồi giảm tốc để rẽ/đỗ hoặc vì thấy xe phía trước dừng). t0 in [2, 8] s là khoảng quanh thời điểm C2 chen vào (cutT0 = 5 s trong thế giới này); decel in [3, 7.5] m/s^2 từ phanh vừa tới phanh gấp, dưới mu*g = 7.85 của đường khô nên khả thi vật lý; dur in [1, 5] s là thời gian phanh. exposure = 0.05 là GIẢ ĐỊNH của mình (khoảng 1 trong 20 chuyến có một xe chen vào rồi phanh gấp), không lấy từ dữ liệu thật: cần dữ liệu lái xe tự nhiên (video hành trình / log đội xe) để thay con số này, và hướng sai lệch chưa biết."
+}
